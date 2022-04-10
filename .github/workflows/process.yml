@@ -1,4 +1,4 @@
-name: build from temlpate
+name: Build from temlpate
 on:
   workflow_dispatch:
   push:
@@ -16,5 +16,8 @@ jobs:
           path: "template"
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}
+          ls ${{ github.workspace }}/template
+          cd ${{ github.workspace }}/template
+          npm i
+          npm run build
       - run: echo "🍏 This job's status is ${{ job.status }}."
