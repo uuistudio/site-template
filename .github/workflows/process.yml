@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout private tools
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
-          repository: vaconsole/blog-test
-          token: ${{ secrets.REPO_TOKEN }} # `GitHub_PAT` is a secret that contains your PAT
-      - name: pull data
+          repository: GiftedSchool/site2
+          token: ${{ secrets.REPO_TOKEN }} 
+      - name: pull template
         run: |-
           rm -rf tmp
           mkdir -p tmp
