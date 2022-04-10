@@ -10,18 +10,6 @@ jobs:
     steps:
       - name: Checkout private tools
         uses: actions/checkout@v3
-        with:
-          repository: GiftedSchool/site2
-          token: ${{ secrets.REPO_TOKEN }} 
-      - name: pull template
-        run: |-
-          rm -rf tmp
-          mkdir -p tmp
-          git clone --depth 1 https://SiteGenie:${{secrets.REPO_TOKEN}}@github.com/SiteGenie/site-project-template tmp
-          ls -alh tmp/Publish
-      - name: copy files and folders
-        run: |-
-          ls -alh
       - name: Commit and push if it changed
         run: |-
           git config user.name "Automated"
