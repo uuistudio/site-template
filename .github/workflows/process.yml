@@ -20,8 +20,9 @@ jobs:
           cd ${{ github.workspace }}/template
           npm i
           npm run build
-          mv template/dist dist
-          rm -rf tempalte
+          ls ${{ github.workspace }}/template
+          mv ${{ github.workspace }}/template/dist dist
+          rm -rf ${{ github.workspace }}/template
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Commit and push if it changed
         run: |-
