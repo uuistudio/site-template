@@ -8,10 +8,10 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - name: Check out repository SiteGenie/site-project-template
+      - name: Check out repository uuistudio/template-curator
         uses: actions/checkout@v3   
         with:
-          repository: SiteGenie/site-project-template
+          repository: uuistudio/template-curator
           token: ${{ secrets.REPO_TOKEN }} 
           path: "template"
       - name: List files in the repository
