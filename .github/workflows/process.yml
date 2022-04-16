@@ -21,7 +21,7 @@ jobs:
           npm i
           npm run build
           ls ${{ github.workspace }}/template
-          mv ${{ github.workspace }}/template/dist dist
+          mv ${{ github.workspace }}/template/dist ./public
           rm -rf ${{ github.workspace }}/template
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Commit and push if it changed
